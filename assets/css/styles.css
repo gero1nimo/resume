@@ -1,0 +1,47 @@
+:root{
+    --background-color: #02000f;
+    --text-color: #d8d8d8;
+    --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --title-size: 3rem;
+    --subtitle-size: 2rem;
+    --paragraph-size: 1rem;
+}
+body{ 
+    background-color: var(--background-color);
+    font-family: var(--font);
+}
+
+p,h1,h2,h3,h4,h5,h6,a{
+    color: var(--text-color);
+}
+h1{
+    font-size: var(--title-size);
+}
+h2{
+    font-size: var(--subtitle-size);
+}
+p{
+    font-size: var(--paragraph-size);
+}
+header{
+    width: 100%;
+    margin: 2rem 0;
+}
+.header-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+.left{
+    width: 40%;
+}
+.right{
+    width: 40%;
+}
+#profile-pic{
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+}
