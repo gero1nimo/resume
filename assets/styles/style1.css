@@ -6,6 +6,9 @@
     --subtitle-size: 2rem;
     --paragraph-size: 1rem;
 }
+*, *::after, *::before{
+    box-sizing: border-box;
+}
 body{ 
     background-color: var(--background-color);
     font-family: var(--font);
@@ -44,4 +47,13 @@ header{
     width: 75%;
     height: 75%;
     border-radius: 50%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
