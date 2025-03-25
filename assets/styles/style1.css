@@ -6,6 +6,8 @@
     --subtitle-size: 2rem;
     --paragraph-size: 1rem;
     --box-color: #525252;
+    --p-line-height: 1.5rem;
+    --h-line-height: 1.75rem;
 }
 *, *::after, *::before{
     box-sizing: border-box;
@@ -19,7 +21,15 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+body::-webkit-scrollbar{
+    display: none;
+}
+p{
+    line-height: var(--p-line-height);
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: var(--h-line-height);
+}
 p,h1,h2,h3,h4,h5,h6,a{
     color: var(--text-color);
 }
@@ -34,7 +44,7 @@ p{
 }
 header{
     width: 80%;
-    margin: 2rem 0;
+    margin: 2rem 0 4rem;
 }
 .nav-bar{
     width: 100%;
@@ -66,19 +76,23 @@ li{
     padding: 0;
     margin: 0;
 }
-.box-article{
-    width: 20rem;
-    border: 1px solid var(--text-color);
-    border-radius: 0.5rem;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about-me-text{
+    width: 60%;
     text-align: center;
+    padding: 2rem;
+}
+.about-me-text h1{
+    padding: 2rem;
+}
+.main-section{
+    display: flex;
+    
 }
 .sect{
-    width: 80%;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
+    display: grid;
+    place-content: center;
+    text-align: center;
 }
 .menu{
     display: flex;
@@ -113,4 +127,28 @@ li{
 .personal-info img{
     width: 20rem;
     border-radius: 50%;
+}
+.box-article{
+    
+    width: 20rem;
+    border: 1px solid var(--text-color);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.skills{
+    display: grid;
+    grid: "Header Header Header Header"
+    "Box1 Box1 Box2 Box2"
+    "Box1 Box1 Box2 Box2"
+    ;
+    gap: 1rem;
+}
+.skills h2{
+    grid-area: Header;
+    text-align: center;
 }
