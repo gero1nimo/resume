@@ -29,6 +29,7 @@ p{
 }
 h1,h2,h3,h4,h5,h6{
     line-height: var(--h-line-height);
+    margin-bottom: 1rem;
 }
 p,h1,h2,h3,h4,h5,h6,a{
     color: var(--text-color);
@@ -84,9 +85,10 @@ li{
 .about-me-text h1{
     padding: 2rem;
 }
-.main-section{
+.main-content{
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
 }
 .sect{
     margin-bottom: 6rem;
@@ -130,7 +132,7 @@ li{
 }
 .box-article{
     
-    width: 20rem;
+    width: 40rem;
     border: 1px solid var(--text-color);
     border-radius: 0.5rem;
     padding: 1rem 2rem;
@@ -142,13 +144,18 @@ li{
 
 .skills{
     display: grid;
-    grid: "Header Header Header Header"
-    "Box1 Box1 Box2 Box2"
-    "Box1 Box1 Box2 Box2"
+    grid: "Header Header Header "
+    "Box1 Gap Box2 "
+    "Box1 Gap Box2 "
     ;
-    gap: 1rem;
+    /* gap: 1rem; */
+    align-items: center;
 }
 .skills h2{
     grid-area: Header;
     text-align: center;
+}
+.gap{
+    grid-area: Gap;
+    width: 2rem;
 }
