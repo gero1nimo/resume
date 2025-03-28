@@ -1,5 +1,6 @@
 :root{
     --background-color: #02000f;
+    --second-background-color: #11192b;
     --text-color: #d8d8d8;
     --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --h1-size: 4rem;
@@ -10,6 +11,7 @@
     --h6-size: 1.25rem;
     --paragraph-size: 1rem;
     --box-color: #525252;
+
     --p-line-height: 1.5rem;
     --h-line-height: 1.75rem;
 }
@@ -17,6 +19,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+
 }
 body{ 
     background-color: var(--background-color);
@@ -75,23 +81,6 @@ li{
     margin: 0;
     color: var(--text-color);
 }
-.about-me-text{
-    width: 60%;
-    text-align: center;
-    padding: 2rem;
-}
-.about-me-text h1{
-    padding: 2rem;
-}
-.main-section{
- 
-}
-.sect{
-    margin-bottom: 6rem;
-    display: grid;
-    place-content: center;
-    text-align: center;
-}
 .menu{
     display: flex;
     align-items: center;
@@ -115,6 +104,27 @@ li{
 .menu-item:hover a{
     color: #02000f;
 }
+.about-me-text{
+    min-width: 60%;
+    text-align: center;
+    padding: 2rem;
+}
+.about-me-text h1{
+    padding: 2rem;
+}
+.main-section{
+    background-color: var(--text-color);
+}
+.sect{
+    max-width: 60%;
+    /* margin-bottom: 6rem; */
+    /* place-content: center; */
+    text-align: center;
+    /* height: 100vh; */
+    position: relative;
+    margin: auto;
+}
+
 .personal-info{
     display: flex;
     flex-direction: column;
@@ -133,16 +143,21 @@ li{
     border: 1px solid #d8d8d8;
     border-radius: 1rem;
     overflow-wrap: break-word;
+    background-color: var(--background-color);
+    text-align: initial;
 }
-.skills{
-    display: grid;
-    grid: "Header Header Header "
-    "Box1 Gap Box2 "
-    "Box1 Gap Box2 "
-    ;
-    /* gap: 1rem; */
-    align-items: center;
+
+.sect.skills{
+    background-color: var(--box-color);
+    width: 100%;
+    padding: 5rem;
+    -webkit-box-shadow: 0px 15px 5px 0px var(--box-color);
+    -moz-box-shadow: 0px 15px 5px 0px var(--box-color);
+    box-shadow: 0px 15px 5px 0px var(--box-color);
+    border-radius: 1rem;
 }
+
+
 .skills h2{
     grid-area: Header;
     text-align: center;
@@ -152,10 +167,111 @@ li{
     width: 2rem;
 }
 .main-content{
-    /* border: 1px solid var(--text-color); */
-    max-width: 60%;
+    width: 100%;
+}
+.sect.resume{
+    background-color: var(--box-color);
+    display: grid;
+    grid: "Header1 Header2 "
+    "Box1 Box2 "
+    "Box1 Box2 "
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    padding: 2rem 2rem 4rem;
+    -webkit-box-shadow: 0px 15px 5px 0px var(--background-color);
+    -moz-box-shadow: 0px 15px 5px 0px var(--background-color);
+    box-shadow: 0px 15px 5px 0px var(--background-color);
+    border-radius: 1rem;
+}
+.background-header1{
+    grid-area: Header1;
+}
+.background-header2{
+    grid-area: Header2;
+}
+.box-article.box1{
+    grid-area: Box1;
+    height: 100%;
+    min-height: 60%;
+}
+.box-article.box2{
+    grid-area: Box2;
+    height: 100%;
+}
+.main-sect{
+    max-width: 100%;
     /* border-left: none; */
-    padding: 1rem 2rem 0 0;
-    position: relative;
-    margin: auto;
+    padding: 2rem 1rem 3rem ;
+    height: fit-content;
+    min-height: 60vh;
+}
+.bg-blue{
+    background-color: var(--second-background-color);
+}
+.bg-dark-blue{
+    background-color: var(--background-color);
+}
+.contact-me{
+    padding: 1rem;
+}
+.contact-me .nav-bar .menu-item{
+    background-color: initial;
+    padding: 1rem .5rem;
+}
+.contact-me .nav-bar .menu-item:hover a{
+    color: #525252;
+}
+/* Küçük ekranlar (mobil cihazlar) */
+@media (max-width: 1024px) {
+    .sect.resume {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .sect.resume h3 {
+        text-align: center;
+    }
+
+    .box-article {
+        max-width: 90%;
+        margin: 1rem 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-bar {
+        text-align: center;
+    }
+
+    .header-section {
+        flex-direction: column;
+    }
+
+    .about-me-text {
+        min-width: 90%;
+    }
+
+    .personal-info img {
+        width: 100%;
+        max-width: 15rem;
+    }
+}
+
+/* Büyük ekranlar için ufak ayarlamalar */
+@media (min-width: 1440px) {
+    .sect.resume {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .about-me-text {
+        max-width: 70%;
+    }
 }

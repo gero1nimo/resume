@@ -5,30 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/style1.css">
     <title>My Personal Portfolio</title>
+    <style>
+        .bg-dark-blue .sect.resume.skills{
+        box-shadow: 0px 15px 5px 0px var(--second-background-color);  
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="nav-bar">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href="http://">About Me</a>
+                    <a href="#personal-info">About Me</a>
                 </li>
                 <li  class="menu-item">
-                    <a href="http://">Experience</a>
+                    <a href="#background">Background</a>
                 </li>
                 <li class="menu-item">
-                    <a href="http://">Education</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li class="menu-item">
-                    <a href="http://">Skills</a>
-                </li>
-                <li class="menu-item">
-                    <a href="http://">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <section class="sect personal-info">
+    <section id="personal-info" class="sect personal-info">
         <img src="assets/images/DSCF1724.jpg" alt="My Profile Picture" >
         <h2>Mehmet Akif Ayzit</h2>
         <p><em>Computer Engineering Student/3rd Grade</em></p>
@@ -48,92 +50,138 @@
     </section>
     <main class="main-section">
         <article class="main-content">
-            <section class="sect experience">
-                <h2>Experience</h2>
-                <article class="box-article">
-                    <div><h5>Business Analyst Intern/Albayrak Holding, Piri Medya</h5></div>
-                    <div><h6>08/2022 - 09/2022</h6></div>
-                    <div>
+            <section id="background" class="main-sect bg-blue">
+                <h2 style="text-align: center;">Background</h2>
+                <section class="sect resume background">
+                    <h3 class="background-header1">Experience</h3>
+                    <h3 class="background-header2">Education</h3>
+                    <article class="box-article box1">
+                        <div><h5>Business Analyst Intern/Albayrak Holding, Piri Medya</h5></div>
+                        <div><h6>08/2022 - 09/2022</h6></div><br>
+                        <div>
+                            <ul>
+                                <li><p><b>Requirement Analysis Skills</b> – Understanding and documenting business needs effectively.</p></li>
+                                <li><p><b>Stakeholder Communication</b> – Collaborating with teams to bridge business and technical requirements.</p></li>
+                                <li><p><b>Data-Driven Decision Making </b> – Interpreting data to support business strategies.</p></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="box-article box2">
                         <ul>
-                            <li><p>RLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
-                            <li><p>D</p></li>
-                            <li><p>pp</p></li>
+                            <li>
+                                <h5>Computer Engineering, 3rd Grade</h5>
+                                <h6>Istanbul Medipol University</h6><br>
+                                <p>2021-2027</p>
+                            </li>
                         </ul>
-                    </div>
-                </article>
+                    </article>
+                </section>
             </section>
-            <section class="sect education">
-                <h2>Education</h2>
-                <article class="box-article">
-                    <ul>
-                        <li>
-                            <h5>Computer Engineering, 3rd Grade</h5>
-                            <h6>Istanbul Medipol University</h6>
-                            <h5>2021-2027</h5>
-                        </li>
-                    </ul>
-                </article>
+            <section id="skills" class="main-sect bg-dark-blue">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Skills</h2>
+
+                <section class="sect resume skills">
+                    <h3>Technical Skills</h3>
+                    <h3>Soft Skills</h3>
+                    <article class="box-article box1">
+                        <ul>
+                            <li>
+                                <p>HTML</p>
+                            </li>
+                            <li>
+                                <p>CSS</p>
+                            </li>
+                            <li>
+                                <p>Python</p>
+                            </li>
+                            <li><p>Java</p></li>
+                            <li><p>Agile</p></li>
+                            <li><p>Wordpress</p></li>
+                        </ul>
+                    </article>
+                    <article class="box-article box2">
+                        <ul>
+                            <li><p>Leadership</p></li>
+                            <li><p>Communication</p></li>
+                            <li><p>Time Management</p></li>
+                            <li>
+                                <p>Project Management</p>
+                            </li>
+                            <li>
+                                <p>Risk Management</p>
+                            </li>
+                            <li>
+                                <p>Teamwork</p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
             </section>
-            <section class="sect skills">
-                <h2>Skills</h2>
-                <article class="box-article">
-                    <ul>
-                        <h5>Technical Skills</h5>
-                        <li>
-                            <p>HTML</p>
-                        </li>
-                        <li>
-                            <p>CSS</p>
-                        </li>
-                        <li>
-                            <p>Python</p>
-                        </li>
-                        <li><p>Java</p></li>
-                        <li><p>Agile</p></li>
-                    </ul>
-                </article>
-                <article class="gap"></article>
-                <article class="box-article">
-                    <ul>
-                        <h5>Soft Skills</h5>
-                        <li><p>Leadership</p></li>
-                        <li><p>Communication</p></li>
-                        <li>
-                            <p>Project Management</p>
-                        </li>
-                        <li>
-                            <p>Risk Management</p>
-                        </li>
-                        <li>
-                            <p>Teamwork</p>
-                        </li>
-                    </ul>
-                </article>
+ 
+
+            <section id="projects" class="main-sect bg-blue">
+                <h2 style="text-align: center;">Projects</h2>
+                <section class="sect resume projects">
+                    <article style="grid-area: Box1;" class="box-article box1">
+                        <ul>
+                            <h5>Student Club Management</h5>
+                            <h6>Achievements</h6>
+                            <li><p>Leadership</p></li>
+                            <li><p>Communication</p></li>
+                            <li>
+                                <p>Project Management</p>
+                            </li>
+                            <li>
+                                <p>Risk Management</p>
+                            </li>
+                            <li>
+                                <p>Teamwork</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <article style="grid-area: Box2;" class="box-article box2">
+                        <ul>
+                            <h5>MASKDER/Manifesto - Website</h5>
+                            <h6>Achievements</h6>
+                            <li><p>HTML</p></li>
+                            <li><p>CSS</p></li>
+                            <li>
+                                <p>Basic JS</p>
+                            </li>
+                            <li>
+                                <p>Basic PHP</p>
+                            </li>
+                            <li>
+                                <p>Wordpress</p>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
             </section>
-            <section class="sect projects">
-                <h2>Projects</h2>
-                <article class="box-article">
-                    <ul>
-                        <h5>Student Club Management</h5>
-                        <h6>Achievements</h6>
-                        <li><p>Leadership</p></li>
-                        <li><p>Communication</p></li>
-                        <li>
-                            <p>Project Management</p>
-                        </li>
-                        <li>
-                            <p>Risk Management</p>
-                        </li>
-                        <li>
-                            <p>Teamwork</p>
-                        </li>
-                    </ul>
-                </article>
-            </section>
+            
         </article>
         <aside></aside>
     </main>
-    
+    <footer>
+        <aside class="contact-me">
+            <nav class="nav-bar">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#personal-info">About Me</a>
+                    </li>
+                    <li  class="menu-item">
+                        <a href="#background">Background</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#projects">Projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </footer>
 </body>
 <script src="https://kit.fontawesome.com/5165873d7c.js" crossorigin="anonymous"></script>
 
