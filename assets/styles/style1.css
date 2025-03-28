@@ -176,8 +176,6 @@ li{
     "Box1 Box2 "
     "Box1 Box2 "
     ;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
     width: 100%;
     padding: 2rem 2rem 4rem;
     -webkit-box-shadow: 0px 15px 5px 0px var(--background-color);
@@ -223,13 +221,18 @@ li{
 .contact-me .nav-bar .menu-item:hover a{
     color: #525252;
 }
+
 /* Küçük ekranlar (mobil cihazlar) */
-@media (max-width: 1024px) {
-    .sect.resume {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+
+@media  (max-width: 1024px) {
+    .menu{
+        display: none;
+    }
+    .menu.footer{
+        display: block;
+    }
+    .sect{
+        max-width: 90%;
     }
 
     .sect.resume h3 {
@@ -262,8 +265,28 @@ li{
         width: 100%;
         max-width: 15rem;
     }
-}
+    .main-sect{
+        padding: 2rem 0 3rem 1rem;
+    }
 
+}
+@media (max-width: 768px) {
+    .sect.resume, .sect.skills{
+        display: grid;
+        grid-template-areas: "Header1"
+        "Box1"
+        "Header2"
+        "Box2"
+        ;
+        align-items: center;
+
+        gap: 1rem;
+    }
+    .box-article{
+        margin-top: 0;
+    }
+    
+}
 /* Büyük ekranlar için ufak ayarlamalar */
 @media (min-width: 1440px) {
     .sect.resume {
